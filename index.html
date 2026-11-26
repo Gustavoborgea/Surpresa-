@@ -84,9 +84,12 @@ Este espaço vai guardar suas palavras, do jeitinho que você quiser.</p>
 
   <section class="panel">
     <h2>Uma música para acompanhar</h2>
-    <p>Escolha uma música que tenha significado para vocês. Ela poderá tocar aqui quando adicionarmos o link ou arquivo.</p>
-    <button type="button" id="musicButton">♪ Música em breve</button>
-    <div class="music-note" id="musicNote">A música ainda será escolhida.</div>
+    <p>Uma música para acompanhar sua carta. Toque no botão para ouvir o vídeo oficial.</p>
+    <button type="button" id="musicButton">♪ Ouvir nossa música</button>
+    <div class="music-note" id="musicNote">Nando Reis e Ana Cañas · Pra Você Guardei o Amor</div>
+    <div id="musicPlayer" style="display:none; margin-top:20px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border:1px solid rgba(216,173,105,.5);">
+      <iframe src="https://www.youtube-nocookie.com/embed/sB8_zYjxSGg?rel=0" title="Nando Reis e Ana Cañas - Pra Você Guardei o Amor" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </section>
   <footer>Feito especialmente para Carla · com carinho, Gustavo</footer>
 </main>
@@ -99,8 +102,11 @@ Este espaço vai guardar suas palavras, do jeitinho que você quiser.</p>
     letterButton.setAttribute('aria-expanded', String(isOpen));
   });
   document.getElementById('musicButton').addEventListener('click', () => {
-    document.getElementById('musicNote').textContent = 'Em breve vamos colocar a música escolhida por você aqui. ❤️';
+    const player = document.getElementById('musicPlayer');
+    const isVisible = player.style.display === 'block';
+    player.style.display = isVisible ? 'none' : 'block';
+    document.getElementById('musicButton').textContent = isVisible ? '♪ Ouvir nossa música' : 'Fechar música';
   });
 </script>
 </body>
-</html>
+                                                                                                                                                                                                                                                                                                                                                 </html>
