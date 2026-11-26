@@ -2,112 +2,156 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#4b1022">
-<title>Para Carla ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050812">
+<title>Para Carla | Com carinho, Gustavo</title>
 <style>
-  :root { --wine:#64152f; --deep:#210b16; --cream:#f5e5c8; --gold:#d8ad69; }
-  * { box-sizing:border-box; }
-  body {
-    margin:0; min-height:100vh; color:var(--cream);
-    font-family: Georgia, 'Times New Roman', serif;
-    background:
-      radial-gradient(ellipse at 18% 12%, rgba(171,93,57,.25), transparent 34%),
-      radial-gradient(ellipse at 85% 80%, rgba(102,26,54,.38), transparent 38%),
-      linear-gradient(145deg,#160910,#35101f 55%,#190a13);
-    overflow-x:hidden;
-  }
-  .grain { position:fixed; inset:0; pointer-events:none; opacity:.12; z-index:0;
-    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E"); }
-  main { position:relative; z-index:1; width:min(900px,92%); margin:auto; padding:54px 0 70px; text-align:center; }
-  .eyebrow { color:var(--gold); letter-spacing:.28em; text-transform:uppercase; font:12px Arial,sans-serif; }
-  h1 { font-size:clamp(42px,9vw,82px); font-weight:normal; margin:18px 0 10px; color:#f4d9b1; text-shadow:0 4px 25px #8c2947; }
-  .subtitle { font-style:italic; color:#e4c6b7; font-size:clamp(17px,3vw,21px); }
-  .flower-art { width:min(390px,85vw); margin:28px auto 24px; filter:drop-shadow(0 12px 22px #080308); }
-  .panel { width:min(650px,100%); margin:28px auto; padding:28px 24px; border:1px solid rgba(216,173,105,.5);
-    background:linear-gradient(135deg,rgba(84,17,39,.75),rgba(32,9,21,.86)); box-shadow:0 18px 55px #08030880; border-radius:5px; }
-  .panel h2 { color:var(--gold); font-weight:normal; font-size:27px; margin:0 0 12px; }
-  .panel p { line-height:1.75; color:#f0dfd0; font-size:17px; }
-  button { border:1px solid var(--gold); background:#711c39; color:#fff0dc; padding:13px 23px; border-radius:3px; font:15px Georgia,serif; cursor:pointer; transition:.2s; }
-  button:hover { background:#8b2949; transform:translateY(-2px); }
-  .letter { display:none; text-align:left; animation:appear .7s ease; }
-  .letter.open { display:block; }
-  .letter p { white-space:pre-line; }
-  .music-note { color:#d8b7a8; font-size:14px; margin-top:12px; }
-  footer { color:#b98b85; font-size:13px; margin-top:42px; font-style:italic; }
-  @keyframes appear { from {opacity:0; transform:translateY(10px)} to {opacity:1; transform:translateY(0)} }
-  @media(max-width:520px){ main{padding-top:38px}.panel{padding:23px 18px} }
+:root{--black:#05070d;--panel:#080f20;--navy:#0b1a35;--blue:#2d83ff;--cyan:#70c7ff;--white:#f5f7ff;--muted:#b9c7dc}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--white);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 10%,#10264b 0,transparent 38%),radial-gradient(circle at 12% 80%,#0c1c39 0,transparent 30%),linear-gradient(145deg,#02040a,#070d19 60%,#03050b);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#9bcfff 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(transparent,#000 18%,#000 85%,transparent)}
+main{position:relative;width:min(900px,92%);margin:auto;padding:58px 0 70px;text-align:center}
+.kicker{font:11px Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#86baff}
+h1{font-weight:normal;font-size:clamp(48px,10vw,82px);margin:16px 0 8px;color:#f7f9ff;text-shadow:0 0 28px #287cff80}
+.subtitle{color:#c4d5ee;font-style:italic;font-size:clamp(17px,3vw,21px)}
+.hero-rose{width:min(210px,55vw);height:auto;margin:26px auto 10px;filter:drop-shadow(0 0 20px #167aff70)}
+.intro{max-width:590px;margin:18px auto 36px;color:var(--muted);line-height:1.8;font-size:16px}
+h2{font-weight:normal;color:#d9eaff;font-size:25px;margin:0 0 10px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:25px auto 42px;max-width:720px}
+.envelope-card{border:1px solid #244d83;border-radius:16px;padding:24px 18px 22px;background:linear-gradient(145deg,#080d18,#0b1930);box-shadow:0 15px 45px #0009,0 0 22px #126cff18;transition:transform .25s,border-color .25s,box-shadow .25s}
+.envelope-card:hover{transform:translateY(-5px);border-color:#4b9bff;box-shadow:0 18px 48px #000b,0 0 26px #167aff40}
+.envelope{position:relative;width:150px;height:102px;margin:4px auto 20px;background:linear-gradient(145deg,#111a2a,#03060c);border:1px solid #294c79;border-radius:7px;box-shadow:0 0 18px #167aff35;cursor:pointer;display:block}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(140deg,transparent 49%,#172c49 50%,transparent 51%),linear-gradient(220deg,transparent 49%,#172c49 50%,transparent 51%);border-radius:6px}
+.envelope:after{content:"";position:absolute;left:50%;top:0;width:0;height:0;transform:translateX(-50%);border-left:74px solid transparent;border-right:74px solid transparent;border-top:52px solid #17243a;filter:drop-shadow(0 1px 2px #4b9bff66)}
+.seal{position:absolute;z-index:2;left:50%;top:48%;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#b9dcff;background:#0b1b36;border:1px solid #4b9bff;box-shadow:0 0 13px #2388ff90;font-size:15px}
+.card-title{color:#f3f7ff;font-size:21px;margin:0 0 7px}
+.card-sub{color:#9fb8d9;font-size:14px;line-height:1.5;margin:0 0 17px}
+button{font:15px Georgia,serif;color:#f6f9ff;background:linear-gradient(135deg,#10264a,#071326);border:1px solid #3f8ce8;border-radius:30px;padding:12px 21px;cursor:pointer;box-shadow:0 0 14px #167aff25;transition:.2s}
+button:hover{background:linear-gradient(135deg,#17396c,#0a1c37);box-shadow:0 0 20px #167aff70;transform:translateY(-1px)}
+.rose-divider{display:flex;align-items:center;justify-content:center;gap:12px;color:#70aef5;margin:20px auto 0;font-size:20px}
+.music{max-width:650px;margin:0 auto;padding:24px;border:1px solid #1d3d68;border-radius:14px;background:#070d19cc}
+.music p{color:var(--muted);line-height:1.7}
+.music-note{font-size:14px;color:#91a9c9}
+a{color:#8dc5ff}
+footer{margin-top:42px;color:#8298b8;font-size:13px}
+.modal{position:fixed;inset:0;z-index:10;display:none;align-items:center;justify-content:center;padding:18px;background:#000d;backdrop-filter:blur(8px)}
+.modal.open{display:flex;animation:fade .25s ease}
+.letter{position:relative;width:min(690px,100%);max-height:88vh;overflow:auto;text-align:left;padding:clamp(25px,6vw,48px);border:1px solid #267ee9;border-radius:15px;background:radial-gradient(circle at 90% 0,#10294e 0,transparent 35%),linear-gradient(155deg,#0b1931,#050a14 72%);box-shadow:0 0 0 1px #5eb4ff30,0 0 35px #087bff50,0 25px 80px #000}
+.letter:before{content:"";position:absolute;inset:8px;border:1px solid #2b5e9a66;border-radius:10px;pointer-events:none}
+.letter-head{text-align:center;position:relative;margin-bottom:27px}
+.letter-rose{font-size:28px;color:#78baff;text-shadow:0 0 16px #1684ff;margin-bottom:9px}
+.letter h2{text-align:center;font-size:clamp(24px,5vw,32px);color:#f4f8ff;text-shadow:0 0 16px #398fff66}
+.letter .small{color:#9bbce4;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.letter-body{position:relative;color:#f3f6fd;font-size:17px;line-height:1.9;white-space:pre-line}
+.signature{text-align:right;color:#c8e2ff;font-size:20px;font-style:italic;margin-top:24px}
+.close{display:block;margin:28px auto 0;position:relative}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(max-width:620px){main{padding-top:42px}.cards{grid-template-columns:1fr;max-width:390px}.envelope-card{padding:22px 16px}.letter-body{font-size:16px;line-height:1.8}}
 </style>
 </head>
 <body>
-<div class="grain"></div>
 <main>
-  <div class="eyebrow">Uma pequena surpresa feita com carinho</div>
+  <div class="kicker">Uma surpresa feita com carinho</div>
   <h1>Carla</h1>
   <div class="subtitle">“Fiz um pequeno universo só para você.”</div>
-
-  <svg class="flower-art" viewBox="0 0 420 330" role="img" aria-label="Ilustração artística de flores em tons dourados e vinho">
-    <defs>
-      <linearGradient id="petal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3c76d"/><stop offset=".55" stop-color="#c87937"/><stop offset="1" stop-color="#7c293d"/></linearGradient>
-      <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8e9b54"/><stop offset="1" stop-color="#284d3d"/></linearGradient>
-    </defs>
-    <path d="M207 310 C195 240 218 170 201 95 M205 242 C150 202 118 207 82 180 M207 215 C270 170 300 166 340 145" fill="none" stroke="#66804e" stroke-width="8" stroke-linecap="round"/>
-    <path d="M194 251 C143 211 117 218 92 193 C137 185 173 202 194 251Z" fill="url(#leaf)" stroke="#c0a15b" stroke-width="2"/>
-    <path d="M217 223 C268 174 302 181 330 154 C319 202 275 224 217 223Z" fill="url(#leaf)" stroke="#c0a15b" stroke-width="2"/>
-    <g transform="translate(203 88)">
-      <g fill="url(#petal)" stroke="#f1c878" stroke-width="2">
-        <ellipse cy="-48" rx="20" ry="43"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(30)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(60)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(90)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(120)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(150)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(180)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(210)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(240)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(270)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(300)"/><ellipse cy="-48" rx="20" ry="43" transform="rotate(330)"/>
+  <svg class="hero-rose" viewBox="0 0 220 230" role="img" aria-label="Rosa azul">
+    <defs><radialGradient id="blueRose"><stop stop-color="#a8dcff"/><stop offset=".45" stop-color="#398be8"/><stop offset="1" stop-color="#102e70"/></radialGradient><linearGradient id="stem"><stop stop-color="#244f50"/><stop offset="1" stop-color="#73a9a0"/></linearGradient></defs>
+    <path d="M111 112 C110 150 123 184 107 222" fill="none" stroke="url(#stem)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M111 168 C73 137 48 153 43 174 C72 184 95 181 111 168Z" fill="#173f48" stroke="#5c9b9c" stroke-width="2"/>
+    <path d="M115 188 C148 151 173 159 180 177 C156 195 137 197 115 188Z" fill="#173f48" stroke="#5c9b9c" stroke-width="2"/>
+    <g transform="translate(110 91)">
+      <g fill="url(#blueRose)" stroke="#79bdff" stroke-width="1.5">
+        <ellipse cy="-33" rx="22" ry="38"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(45)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(90)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(135)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(180)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(225)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(270)"/><ellipse cy="-33" rx="22" ry="38" transform="rotate(315)"/>
       </g>
-      <circle r="29" fill="#54202c" stroke="#e0ad58" stroke-width="5"/>
-      <circle r="18" fill="#9c5a35"/><g fill="#e5b75c"><circle cx="-8" cy="-5" r="3"/><circle cx="7" cy="-10" r="3"/><circle cx="9" cy="7" r="3"/><circle cx="-7" cy="10" r="3"/><circle r="3"/></g>
+      <path d="M-18 -4 C-28 -26 1 -45 17 -26 C31 -9 9 18 -7 16 C-27 13 -27 -9 -9 -17 C3 -22 15 -10 8 1 C3 10 -9 7 -9 0" fill="none" stroke="#b6e0ff" stroke-width="7" stroke-linecap="round"/>
+      <circle r="7" fill="#d2edff"/>
     </g>
-    <g transform="translate(83 179) scale(.55)">
-      <g fill="#9d3d50" stroke="#e4a36b" stroke-width="3"><ellipse cy="-38" rx="18" ry="35"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(45)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(90)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(135)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(180)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(225)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(270)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(315)"/></g><circle r="19" fill="#d5a34f"/>
-    </g>
-    <g transform="translate(339 143) scale(.48)">
-      <g fill="#a54a56" stroke="#e4b46c" stroke-width="3"><ellipse cy="-38" rx="18" ry="35"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(45)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(90)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(135)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(180)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(225)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(270)"/><ellipse cy="-38" rx="18" ry="35" transform="rotate(315)"/></g><circle r="19" fill="#d5a34f"/>
-    </g>
-    <path d="M150 304 Q208 280 267 304" fill="none" stroke="#d4a35c" stroke-width="3" opacity=".8"/>
   </svg>
+  <p class="intro">Algumas palavras merecem ser guardadas com carinho. Preparei duas cartas para você abrir no seu tempo. Cada uma tem um pedacinho do que sinto e do que desejo construir ao seu lado.</p>
 
-  <section class="panel">
-    <h2>Uma surpresa para você</h2>
-    <p>Tem coisas que merecem ser feitas com calma, carinho e um pouco de poesia.</p>
-    <button id="letterButton" type="button" aria-expanded="false">Abrir minha carta ❤️</button>
-    <div class="letter" id="letter">
-      <p><em>Minha carta para você ainda está sendo escrita...</em>
-
-Este espaço vai guardar suas palavras, do jeitinho que você quiser.</p>
-      <p style="text-align:right;color:#d8ad69">Com carinho, Gustavo</p>
-    </div>
-  </section>
-
-  <section class="panel">
+  <h2>Escolha uma carta</h2>
+  <div class="cards">
+    <section class="envelope-card">
+      <button class="envelope" type="button" aria-label="Abrir a primeira carta" onclick="openLetter('first')"><span class="seal">✦</span></button>
+      <p class="card-title">Minha estrelinha do céu</p>
+      <p class="card-sub">Uma carta sobre nossa história, carinho e tudo o que você significa para mim.</p>
+      <button type="button" onclick="openLetter('first')">Abrir primeira carta</button>
+    </section>
+    <section class="envelope-card">
+      <button class="envelope" type="button" aria-label="Abrir a segunda carta" onclick="openLetter('second')"><span class="seal">✧</span></button>
+      <p class="card-title">Não desista da nossa história</p>
+      <p class="card-sub">Uma mensagem sobre confiança, paciência e acreditar no nosso processo.</p>
+      <button type="button" onclick="openLetter('second')">Abrir segunda carta</button>
+    </section>
+  </div>
+  <div class="rose-divider" aria-hidden="true">✧ <span>🌹</span> ✧</div>
+  <section class="music">
     <h2>Uma música para acompanhar</h2>
-    <p>Uma música para acompanhar sua carta. Toque no botão para ouvir o vídeo oficial.</p>
-    <button type="button" id="musicButton">♪ Ouvir nossa música</button>
-    <div class="music-note" id="musicNote">Nando Reis e Ana Cañas · Pra Você Guardei o Amor</div>
-    <div id="musicPlayer" style="display:none; margin-top:20px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border:1px solid rgba(216,173,105,.5);">
-      <iframe src="https://www.youtube-nocookie.com/embed/sB8_zYjxSGg?rel=0" title="Nando Reis e Ana Cañas - Pra Você Guardei o Amor" style="position:absolute; inset:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Nando Reis e Ana Cañas · <em>Pra Você Guardei o Amor</em></p>
+    <button type="button" id="musicButton" onclick="toggleMusic()">♪ Ouvir nossa música</button>
+    <div id="musicPlayer" style="display:none;margin-top:18px;position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border:1px solid #286fc0;border-radius:10px">
+      <iframe src="https://www.youtube-nocookie.com/embed/sB8_zYjxSGg?rel=0" title="Pra Você Guardei o Amor" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <p class="music-note"><a href="https://www.youtube.com/watch?v=sB8_zYjxSGg" target="_blank" rel="noopener noreferrer" style="color:#e8c58e;">Se o vídeo não abrir aqui, toque para assistir no YouTube.</a></p>
+    <p class="music-note"><a href="https://www.youtube.com/watch?v=sB8_zYjxSGg" target="_blank" rel="noopener noreferrer">Abrir no YouTube</a></p>
   </section>
   <footer>Feito especialmente para Carla · com carinho, Gustavo</footer>
 </main>
+
+<div class="modal" id="first" role="dialog" aria-modal="true" aria-label="Primeira carta" onclick="backdropClose(event,'first')">
+  <article class="letter">
+    <header class="letter-head"><div class="letter-rose">🌹</div><div class="small">Uma carta para você</div><h2>Para minha estrelinha do céu</h2></header>
+    <div class="letter-body">Carla,
+
+A gente passou bastante tempo construindo uma conexão, e hoje temos a oportunidade de cuidar dela e fazer tudo ainda melhor. Eu não sei tudo o que você viveu ou o que fez você criar algumas inseguranças, mas quero que saiba que estou aqui para caminhar ao seu lado, apoiar você e respeitar seu tempo.
+
+Fiz esta carta e este site para mostrar o quanto você é especial para mim. É a primeira vez que me dedico a fazer algo assim, e passei horas preparando tudo com carinho, pensando em você e em como seria bonito poder ler estas palavras.
+
+Sei que talvez você ainda não confie totalmente em mim e que algumas coisas possam dar medo. Não quero exigir sua confiança nem apressar nada. Quero conquistar isso com atitudes, sendo alguém em quem você possa se apoiar.
+
+Você esperou por tanto tempo, e agora que nossos caminhos se encontraram de verdade, quero aproveitar essa oportunidade para construir algo bonito com você. Mesmo com a distância e com as dificuldades, tenho vontade de estar perto, de conhecer você cada vez mais e, quando for possível, finalmente te encontrar.
+
+Talvez eu ainda não consiga oferecer tudo o que gostaria, mas tenho sonhos, objetivos e vontade de melhorar. Quero crescer, conquistar minhas coisas e fazer a minha parte para que a gente possa viver momentos juntos.
+
+Quero ouvir você, respeitar seus sentimentos e estar ao seu lado nos dias bons e nos difíceis. Você não precisa esconder suas inseguranças nem ser perfeita comigo. Quero conhecer você de verdade, do seu jeito.
+
+Obrigado por fazer parte da minha vida e por todos os momentos que já compartilhamos. Peço a Deus que cuide de você e que nos dê sabedoria para construir nossa história com carinho, respeito e paciência.
+
+Eu te amo, minha estrelinha do céu.</div>
+    <div class="signature">Cartinha de Gustavo ❤️</div>
+    <button class="close" type="button" onclick="closeLetter('first')">Fechar carta</button>
+  </article>
+</div>
+
+<div class="modal" id="second" role="dialog" aria-modal="true" aria-label="Segunda carta" onclick="backdropClose(event,'second')">
+  <article class="letter">
+    <header class="letter-head"><div class="letter-rose">🌹</div><div class="small">Mais algumas palavras do coração</div><h2>Não desista da nossa história</h2></header>
+    <div class="letter-body">Carla,
+
+Quero que você tenha paciência comigo e com o nosso processo. Eu sei que ainda tenho muito a aprender e muitas coisas para conquistar, mas o que sinto por você é sincero. Não quero que você pense que precisa ter todas as respostas agora ou que precisa confiar em mim de uma hora para outra.
+
+Eu não espero que você seja perfeita, nem que deixe suas inseguranças de lado só porque estamos juntos. Quero que se sinta livre para ser você mesma, falar sobre o que sente e respeitar o seu próprio tempo.
+
+Só queria pedir que não desistisse de mim antes de conhecer tudo o que ainda podemos construir. A distância e as dificuldades existem, mas quero enfrentar cada etapa com diálogo, respeito e atitudes. Não quero que minhas palavras sejam apenas promessas: quero mostrar, pouco a pouco, que você pode contar comigo.
+
+Tenho sonhos e objetivos, e estou me esforçando para chegar onde desejo. Talvez eu ainda não tenha tudo o que gostaria de oferecer, mas estou trabalhando para construir meu caminho. Você é especial para mim, e quero que veja meu esforço não como uma promessa de perfeição, mas como a vontade verdadeira de evoluir.
+
+Não precisamos correr. Quero que a gente avance no nosso ritmo, aprendendo a confiar, conversando quando algo incomodar e cuidando um do outro sem deixar de respeitar quem somos.
+
+Confie no nosso processo. Eu acredito em você, acredito em nós e quero continuar escolhendo essa história ao seu lado.
+
+Com carinho,
+Gustavo</div>
+    <div class="signature">❤️</div>
+    <button class="close" type="button" onclick="closeLetter('second')">Fechar carta</button>
+  </article>
+</div>
+
 <script>
-  const letterButton = document.getElementById('letterButton');
-  const letter = document.getElementById('letter');
-  letterButton.addEventListener('click', () => {
-    const isOpen = letter.classList.toggle('open');
-    letterButton.textContent = isOpen ? 'Fechar minha carta' : 'Abrir minha carta ❤️';
-    letterButton.setAttribute('aria-expanded', String(isOpen));
-  });
-  document.getElementById('musicButton').addEventListener('click', () => {
-    const player = document.getElementById('musicPlayer');
-    const isVisible = player.style.display === 'block';
-    player.style.display = isVisible ? 'none' : 'block';
-    document.getElementById('musicButton').textContent = isVisible ? '♪ Ouvir nossa música' : 'Fechar música';
-  });
+function openLetter(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden'}
+function closeLetter(id){document.getElementById(id).classList.remove('open');document.body.style.overflow=''}
+function backdropClose(event,id){if(event.target.id===id)closeLetter(id)}
+function toggleMusic(){const p=document.getElementById('musicPlayer');const visible=p.style.display==='block';p.style.display=visible?'none':'block';document.getElementById('musicButton').textContent=visible?'♪ Ouvir nossa música':'Fechar música'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLetter('first');closeLetter('second')}})
 </script>
 </body>
-  </html>
+</html>
